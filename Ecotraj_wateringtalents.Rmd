@@ -1,0 +1,15 @@
+---
+title: "Ecotraj_WateringTalents"
+author: "Miquel De Cáceres, Javi de la Casa"
+date: "2025-11-26"
+output: pdf_document
+---
+
+  + Title: Introduction to Ecological Trajectory Analysis (ETA), a tool for the analysis of temporal dynamics in ecology
+  + Who: Miquel De Cáceres (EMF coordinator), Javier de la Casa (PhD. student) 
+  + Recommended for: MsC or Ph.D. students and postdocs
+  + When: February 2026
+  + Where: Room to be determined
+  + Description: Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of ecological entities (e.g. communities or ecosystems). The aim of the course is to provide an introduction to the concepts, geometric elements and statistics of ETA and recent extensions of the framework, including an overview of applications to different domains.
+  + More info: Materials of a previous edition of the same course in Brest can be found at https://emf.creaf.cat/training/ecotraj_course/.
+  + E-mails: m.caceres@creaf.uab.cat, j.delacasa@creaf.uab.cat
