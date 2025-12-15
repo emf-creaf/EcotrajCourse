@@ -62,3 +62,10 @@ Three different course editions have been held so far:
 - *Location*: Technopole Brest-Iroise (Plouzané, France)
 - *Organizer*: NEST hub
 - *Lecturers*: Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri
+
+#### Second edition (Feb 2026)
+
+- *Dates*: 24-25th Feb 2026
+- *Location*: UAB (Cerdanyola del Vallès, Spain)
+- *Organizer*: CREAF
+- *Lecturers*: Miquel De Cáceres, Javier de la Casa
