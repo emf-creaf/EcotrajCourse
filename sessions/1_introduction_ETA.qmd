@@ -57,8 +57,12 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
  + The initial framework was extended with new metrics and visualisation modes in Sturbois et al. (2021a).
 
  + The same framework was applied to stable isotope data in Sturbois et al. (2021b), referring to it as **Stable Isotope Trajectory Analysis (SITA)**.
+ 
+ + Has been instrumental to develop another methodological framework to identify, characterize and compare **Ecological Dynamic Regimes (EDR)** (Sánchez-Pinillos et al. 2023).
+ 
+ + The framework has also been applied in a **paleoecological context** using elemental composition data (de la Casa et al. 2025).
 
- + Recently, the framework has been extended to cyclical data (Djeghri et al. in prep.), under the name of **Cyclical Ecological Trajectory Analysis (CETA)**.
+ + Recently, the framework has been extended to cyclical data (Djeghri et al. 2026), under the name of **Cyclical Ecological Trajectory Analysis (CETA)**.
  
 . . .
 
@@ -144,20 +148,53 @@ Recurrent or cyclical time is another conceptual element in [Cyclical Ecological
 2.  Conceptual and geometric elements
 :::
 
-## Geometric elements
+## Geometric elements (1)
 
 The most important *geometric* elements of ETA are:
 
+:::: {.columns}
+
+::: {.column width="75%"}
 | Element   | Notation | Description                                                  |
 |-------------------|--|---------------------------------------------------|
 | *Ecological state* | $\mathbf{x}$ | The position of an observation in space $\Omega_0$. |
 | *Directed segment* | $\mathbf{s}$ | A pair of time-ordered ecological states. |
 | *Ecological observation* | $\mathbf{o}$ | A pair including the ecological state $\mathbf{x}$ and the assessment time $t$, i.e. $\mathbf{o} = \{ \mathbf{x}, t \}$. |
 | *Ecological trajectory* | $\mathbf{T}$ | A trajectory of size $n$ is defined as the set of $n$ time-ordered ecological observations. Alternatively, $\mathbf{T}$ can be defined as a set of $n - 1$ directed segments. |
-| *Trajectory path* | | A continuous function $f_T: [0,1]$ into $\Omega_0$, defining all points of the trajectory $\mathbf{T}$ from $f_T(0) = x_1$ to $f_T(1) = x_n$. The path includes the ecological states derived from ecological observations as well as intermediate states. |
-| *Ecological sub-trajectory* | | A trajectory derived from a time-ordered subset of the observations of its parent trajectory. |
-| *Trajectory section* | | A trajectory describing a subset of its parent trajectory path.  |
+:::
 
+::: {.column width="25%"}
+![](resources/img/trajectory.webp)
+:::
+
+::::
+
+
+::: footer
+2.  Conceptual and geometric elements
+:::
+
+
+## Geometric elements (2)
+
+The most important *geometric* elements of ETA are:
+
+:::: {.columns}
+
+::: {.column width="60%"}
+| Element   | Description                                                  |
+|-------------------|---------------------------------------------------|
+| *Ecological sub-trajectory* | A trajectory derived from a time-ordered subset of the observations of its parent trajectory. |
+| *Trajectory path* | A continuous function $f_T: [0,1]$ into $\Omega_0$, defining all points of the trajectory $\mathbf{T}$ from $f_T(0) = x_1$ to $f_T(1) = x_n$. The path includes the ecological states derived from ecological observations as well as intermediate states. |
+| *Trajectory section* | A trajectory describing a subset of its parent trajectory path.  |
+
+:::
+
+::: {.column width="40%"}
+![](resources/img/trajectory_subsets.webp)
+:::
+
+::::
 . . .
 
 ::: callout-note
@@ -168,14 +205,13 @@ Other geometry elements are defined in [Cyclical Ecological Trajectory Analysis 
 2.  Conceptual and geometric elements
 :::
 
-
 # 3. Trajectory objects {background-color="#008080"}
 
 ## Trajectory data inputs
 
 Trajectory data inputs for ETA are: 
 
-  a. Trajectory metadata describing entities and observations. 
+  a. Trajectory metadata describing **entities** and **observations**. 
   b. A distance matrix $\mathbf{D}$ representing the resemblance between all pairs of ecological states.
 
 . . .
@@ -329,6 +365,9 @@ Since $\Omega_0$ has only two dimensions in this example, the Principal Coordina
 
 ## Characterizing changes in state
 
+:::: {.columns}
+
+::: {.column width="70%"}
 
 | Metric            |  Description                                       |
 |-------------------|----------------------------------------------------|
@@ -341,13 +380,15 @@ Since $\Omega_0$ has only two dimensions in this example, the Principal Coordina
 | *Trajectory internal variation* | An unbiased estimator of the internal variance in the ecological states that conform trajectory $\mathbf{T}$. |
 | *Contribution of states to internal variation* | The *absolute* (sum of squares) or *relative* contributions of individual ecological states to the temporal variation in trajectory $\mathbf{T}$. |
 
-
-
-. . .
-
-::: callout-note
-Combinations of these metrics can be used to estimate other metrics presented in Sturbois et al. (2021a), such as the *Net change ratio* or *Recovering or departing trajectory*.
 :::
+
+::: {.column width="30%"}
+![](resources/img/changes_state.webp)
+:::
+
+::::
+
+
 
 ::: footer
 4. Characterizing trajectories
@@ -355,9 +396,30 @@ Combinations of these metrics can be used to estimate other metrics presented in
 
 ## Characterizing changes in state
 
-Segment/trajectory length or speed metrics are useful, for example, *to determine which entity is evolving faster* than others or *to identify periods of faster changes* within the dynamics of a single entity.
+:::: {.columns}
 
-. . .
+::: {.column width="70%"}
+
+| Metric            |  Example question(s)                               |
+|-------------------|----------------------------------------------------|
+| Segment/trajectory length  | *Which entity has changed the most?* *What has been the impact of particular events (e.g. disturbances)?* |
+| Segment/trajectory speed  | *Which entity has faster dynamics?* *What period corresponds to faster dynamics?* |
+| Net change | *Is the target entity returning to its initial state after a disturbance?* |
+| Trajectory internal variation | *Is the target entity temporally stable?* *What observation has the most unique state?* |
+:::
+
+::: {.column width="30%"}
+![](resources/img/changes_state.webp)
+:::
+
+::::
+
+
+
+::: footer
+4. Characterizing trajectories
+:::
+## Characterizing changes in state
 
 One can obtain the length of trajectory segments and the total path length:
 
@@ -394,13 +456,56 @@ trajectoryInternalVariation(x)
 
 ## Characterizing changes in direction
 
-Since space $\Omega_0$ can include multiple dimensions, angles cannot be calculated with respect to a single plane. Instead, each angle is measured on the plane defined by a **triplet** of points. 
 
-. . .
+:::: {.columns}
 
-Zero angles indicate that the three points (e.g. the two consecutive segments) are in a straight line. The larger the angle value, the more is trajectory changing in direction. 
+::: {.column width="70%"}
 
-. . .
+| Metric            |  Description                                       |
+|-------------------|----------------------------------------------------|
+| *Angle between consecutive segments*  | The angle (change in direction) between two consecutive segments on the corresponding plane formed by the corresponding triplet. |
+| *Angle with respect to an initial state*  | The total path length of a trajectory $\mathbf{T}$ is the sum of the lengths of its directed segments. |
+| *Angle with respect to 2D axes* | The angle between a particular segment and the first or second axis. | 
+| *Trajectory directionality* | A weighed average of along the trajectory of the relative difference between angles and straight lines (180º). |
+:::
+
+::: {.column width="30%"}
+![](resources/img/changes_direction.webp)
+:::
+
+::::
+
+::: footer
+4. Characterizing trajectories
+:::
+
+
+## Characterizing changes in direction
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+| Metric            |  Example question(s)                                      |
+|-------------------|----------------------------------------------------|
+| Angle between consecutive segments  | *Are there abrupt changes in direction of dynamics?* |
+| Angle with respect to an initial state  | *Does the trajectory continue the initial direction?* |
+| Angle with respect to 2D axes | *Can the direction of changes be interpreted?* | 
+| Trajectory directionality | *Do dynamics of the target entity follow the same direction consistently?* |
+:::
+
+::: {.column width="30%"}
+![](resources/img/changes_direction.webp)
+:::
+
+::::
+
+::: footer
+4. Characterizing trajectories
+:::
+
+## Characterizing changes in direction
 
 Function `trajectoryAngles()` allows calculating the angles between consecutive segments:
 
