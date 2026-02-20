@@ -556,6 +556,31 @@ Another function, called `trajectoryWindowMetrics()` calculates trajectory metri
 
 # 5. Comparing target states to reference trajectories {background-color="#008080"}
 
+## Distances, relative positions and shifts
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+| Metric            |  Example question(s)                                       |
+|-------------------|----------------------------------------------------|
+| Distance between $\mathbf{y}$ and $\mathbf{T}$  | *How likely is that the target entity will follow the dynamics of the reference trajectory?* |
+| Relative position of  $proj(\mathbf{y}, \mathbf{T})$ with respect to $\mathbf{T}$  | *How far is the target from the final (mature) state of the reference dynamics?* |
+| Time shift of observed state with respect to $\mathbf{T}$  | *Does the observation of the target state represents a phenological advance/delay?* |
+
+:::
+
+::: {.column width="30%"}
+![](resources/img/comparing_target_reference.webp)
+:::
+
+::::
+
+::: footer
+5. Comparing states to trajectories
+:::
+
 
 ## Relative positions and orthogonal projection
 
@@ -646,11 +671,32 @@ We see that the observations of trajectory "2" correspond to states of trajector
 
 ## Trajectory convergence/divergence
 
-The study of the convergence or divergence between a pair of trajectories can be done in different ways, corresponding to different ecological questions.
+:::: {.columns}
 
-. . .
+::: {.column width="65%"}
 
-If the trajectories are synchronous (i.e., their observations where done at the same times), one can analyze the sequence of distances between consecutive observations and address the question of whether the states of the two trajectories become closer/farther over time using a statistical test:
+| Metric            |  Example question(s)                                       |
+|-------------------|----------------------------------------------------|
+| **Asymmetric** conv./div.  | *Are the states of of the target trajectory becoming closer/farther to the reference trajectory over time?* |
+| **Symmetric** conv./div.   | *Are the states of the two trajectories becoming closer/farther over time?* |
+| **Multiple** conv./div.  | *Are the states of the multiple entities becoming more similar over time?* |
+
+:::
+
+::: {.column width="35%"}
+![](resources/img/convergence_divergence.webp)
+:::
+
+::::
+
+
+::: footer
+6. Comparing pairs of trajectories
+:::
+
+## Trajectory convergence/divergence
+
+If the trajectories are synchronous (i.e., their observations where done at the same times), one can analyze the sequence of distances between consecutive observations:
 
 ```{r, echo = TRUE} 
 trajectoryConvergence(x, type = "pairwise.symmetric")
@@ -666,11 +712,18 @@ trajectoryConvergence(x, type = "multiple")
 
 . . .
 
-Finally, trajectory convergence/divergence can also be studied in non-synchronous trajectories. In this case, the question addressed is whether the states of the target trajectory become closer/farther to the reference trajectory over time.
+Trajectory convergence/divergence can also be studied **asymmetrically** using:
 
 ```{r, echo = TRUE, eval = FALSE} 
 trajectoryConvergence(xt, type = "pairwise.asymmetric")
 ```  
+
+
+. . .
+
+::: callout-note
+Check out other ways of describing trajectory relationships in function `trajectoryRMA()`!.
+:::
 
 
 ::: footer
@@ -712,6 +765,41 @@ A detailed comparison of trajectory dissimilarity indices can be found in articl
 
 
 # 7. Variation in ecological dynamics {background-color="#008080"}
+
+## Space of trajectory dissimilarity
+
+![](resources/img/space_dissimilarity.webp)
+
+::: footer
+7. Variation in ecological dynamics
+:::
+
+
+## Variation in dynamics
+
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+| Metric            |  Example question(s)                                       |
+|-------------------|----------------------------------------------------|
+| **Asymmetric** conv./div.  | *Are the states of of the target trajectory becoming closer/farther to the reference trajectory over time?* |
+| **Symmetric** conv./div.   | *Are the states of the two trajectories becoming closer/farther over time?* |
+| **Multiple** conv./div.  | *Are the states of the multiple entities becoming more similar over time?* |
+
+:::
+
+::: {.column width="35%"}
+:::
+
+::::
+
+
+::: footer
+7. Variation in ecological dynamics
+:::
+
 
 ## Variation in dynamics
 
