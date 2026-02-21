@@ -77,7 +77,7 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
 
 **Brief history of ETA**
 
- + Introduced as **Community Trajectory Analysis (CTA)**, a framework for trajectory analysis in community ecology ([De Cáceres et al. 2029](https://doi.org/10.1002/ecm.1350)).
+ + Introduced as **Community Trajectory Analysis (CTA)**, a framework for trajectory analysis in community ecology ([De Cáceres et al. 2019](https://doi.org/10.1002/ecm.1350)).
 
  + Extended with new **metrics** and **visualisation** modes ([Sturbois et al. 2021a](https://doi.org/10.1016/j.ecolmodel.2020.109400)).
 
