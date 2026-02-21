@@ -11,7 +11,7 @@ format:
     theme: [default, resources/scss/custom.scss]
 editor: source
 author: "Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri, Javi de la Casa"
-institute: "EMF-CREAF, CSIC, LEMAR"
+institute: "EMF-CREAF-CSIC, LEMAR"
 toc: false
 toc-depth: 2
 number-sections: false
@@ -740,7 +740,7 @@ trajectoryConvergence(xt, type = "pairwise.asymmetric")
 . . .
 
 ::: callout-note
-Check out other ways of describing trajectory relationships in function `trajectoryRMA()`!.
+Check out other ways of describing trajectory relationships in function `trajectoryRMA()`!
 :::
 
 
