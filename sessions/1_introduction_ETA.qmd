@@ -77,17 +77,19 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
 
 **Brief history of ETA**
 
- + In 2019, De Cáceres et al, presented **Community Trajectory Analysis (CTA)** as a framework for trajectory analysis in community ecology.
+ + Introduced as **Community Trajectory Analysis (CTA)**, a framework for trajectory analysis in community ecology ([De Cáceres et al. 2029](https://doi.org/10.1002/ecm.1350)).
 
- + The initial framework was extended with new metrics and visualisation modes in Sturbois et al. (2021a).
+ + Extended with new **metrics** and **visualisation** modes ([Sturbois et al. 2021a](https://doi.org/10.1016/j.ecolmodel.2020.109400)).
 
- + The same framework was applied to stable isotope data in Sturbois et al. (2021b), referring to it as **Stable Isotope Trajectory Analysis (SITA)**.
+ + Applied to stable isotope data, referred to it as **Stable Isotope Trajectory Analysis (SITA)** ([Sturbois et al. 2021b](https://doi.org/10.1002/ecm.1501)).
  
- + Instrumental to develop another methodological framework to identify, characterize and compare **Ecological Dynamic Regimes (EDR)** (Sánchez-Pinillos et al. 2023).
- 
- + Recently applied in a **paleoecological context** using elemental composition data (de la Casa et al. 2025).
+ + Instrumental to develop another methodological framework: **Ecological Dynamic Regimes (EDR)** ([Sánchez-Pinillos et al. 2023](https://doi.org/10.1002/ecm.1589)).
 
- + More recently, the framework has been extended to cyclical data (Djeghri et al. 2026), under the name of **Cyclical Ecological Trajectory Analysis (CETA)**.
+ + Instrumental to develop another methodological framework: **Ecological Quality Assessment (EQA)** ([Sturbois  et al. 2023](https://doi.org/10.1002/ecs2.4726)).
+ 
+ + Applied in a **paleoecological context** using elemental composition data ([de la Casa et al. 2025](https://doi.org/10.1016/j.ecolind.2025.113630)).
+
+ + Extended to cyclical data, under the name of **Cyclical Ecological Trajectory Analysis (CETA)** (Djeghri et al. 2026)^[Djeghri N, Sturbois A, Hélaouët P, Geissmann Q, Rimmelin-Maury P, Boyé A, Gauthier O, De Cáceres M (2026). Going round in cycles but going somewhere: Deciphering cyclical dynamics using Ecological Trajectory Analysis. Ecological Monographs.].
  
 . . .
 
