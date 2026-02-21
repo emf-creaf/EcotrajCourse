@@ -10,8 +10,8 @@ format:
     logo: resources/img/logos.png
     theme: [default, resources/scss/custom.scss]
 editor: source
-author: "Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri"
-institute: "EMF-CREAF, VivArmor Nature, LEMAR"
+author: "Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri, Javi de la Casa"
+institute: "EMF-CREAF, CSIC, LEMAR"
 toc: false
 toc-depth: 2
 number-sections: false
@@ -42,6 +42,30 @@ progress: true
 
 # 1. Introduction {background-color="#008080"}
 
+## Analytical frameworks related to ecological trajectories
+
+**Initial state reference**
+
+![](resources/img/Bagchi.webp)
+
+*Bagchi S.,et al. 2017. Quantifying long-term plant community dynamics with movement models: Implications for ecological resilience. Ecological Applications 27: 1514–1528.*
+
+::: footer
+1.  Introduction
+:::
+
+## Analytical frameworks related to ecological trajectories
+
+**Second-stage community analysis**
+
+![](resources/img/Clarke.png)
+
+*Clarke et al. 2006. Exploring interactions by second-stage community analyses. Journal of Experimental Marine Biology and Ecology 338: 179–192.*
+
+::: footer
+1.  Introduction
+:::
+
 ## About Ecological Trajectory Analysis
 
 **What is Ecological Trajectory Analysis?**
@@ -50,7 +74,7 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
 
 . . .
 
-**History of ETA**
+**Brief history of ETA**
 
  + In 2019, De Cáceres et al, presented **Community Trajectory Analysis (CTA)** as a framework for trajectory analysis in community ecology.
 
@@ -58,20 +82,14 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
 
  + The same framework was applied to stable isotope data in Sturbois et al. (2021b), referring to it as **Stable Isotope Trajectory Analysis (SITA)**.
  
- + Has been instrumental to develop another methodological framework to identify, characterize and compare **Ecological Dynamic Regimes (EDR)** (Sánchez-Pinillos et al. 2023).
+ + Instrumental to develop another methodological framework to identify, characterize and compare **Ecological Dynamic Regimes (EDR)** (Sánchez-Pinillos et al. 2023).
  
- + The framework has also been applied in a **paleoecological context** using elemental composition data (de la Casa et al. 2025).
+ + Recently applied in a **paleoecological context** using elemental composition data (de la Casa et al. 2025).
 
- + Recently, the framework has been extended to cyclical data (Djeghri et al. 2026), under the name of **Cyclical Ecological Trajectory Analysis (CETA)**.
+ + More recently, the framework has been extended to cyclical data (Djeghri et al. 2026), under the name of **Cyclical Ecological Trajectory Analysis (CETA)**.
  
 . . .
 
-
-. . .
-
-**Flexibility**
-
-Since it can be applied to multiple target entities and multivariate spaces, we collectively refer to the framework as **Ecological Trajectory Analysis (ETA)**.
 
 
 ::: footer
@@ -135,7 +153,7 @@ The most important *conceptual* elements of ETA are:
 | *Ecological observation* | $\mathbf{o}$  | The assessment of the state of a target entity, normally implying multiple attributes, at a given point in time.  We also use the word observation to refer to the pair including the ecological state and time of assessment.                        |
 | *Survey* | | An indication of the order of ecological observations (e.g. first, second, …), sometimes taken as a surrogate of linear time. |
 | *Ecological state* | $\mathbf{x}$ | The feature values of a target entity when assessed at given point in time. In practice, it corresponds to an (implicit or explicit) position in $\Omega_0$. |
-| *Multivariate state space* | $\Omega_0$ | The multidimensional space of ecological states. While $\Omega_0$ could be defined by explicit orthogonal axes, in ETA it is defined by calculating the dissimilarity ($d$) between all pairs of states. |
+| *Multivariate state space* | $\Omega_0$ | The multidimensional space of ecological states. While $\Omega_0$ could be defined by explicit orthogonal axes, in ETA it is defined by calculating the dissimilarity ($d$) between all pairs of states. Therefore it can use **all dimensions** of ecological resemblance. |
 | *Time* | $t$ | The position of a given ecological observation in a (linear) temporal axis (i.e. ‘when’ the assessment act occurred).  |
 
 . . .
@@ -732,7 +750,7 @@ Check out other ways of describing trajectory relationships in function `traject
 
 ## Trajectory dissimilarity
 
-Calculating the dissimilarity between a pair of trajectories allows quantifying the resemblance in  dynamics of the corresponding pair of ecological entities. 
+Calculating the dissimilarity between a pair of trajectories allows quantifying the resemblance in dynamics of the corresponding pair of ecological entities. 
 
 . . .
 
@@ -768,6 +786,8 @@ A detailed comparison of trajectory dissimilarity indices can be found in articl
 
 ## Space of trajectory dissimilarity
 
+Calculating the dissimilarity between all pairs of entities results in a new space ($\Omega_\mathbf{T}$) of resemblance in ecological dynamics.
+
 ![](resources/img/space_dissimilarity.webp)
 
 ::: footer
@@ -780,17 +800,20 @@ A detailed comparison of trajectory dissimilarity indices can be found in articl
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="55%"}
 
-| Metric            |  Example question(s)                                       |
+| Metric            |  Usage(s)                                   |
 |-------------------|----------------------------------------------------|
-| **Asymmetric** conv./div.  | *Are the states of of the target trajectory becoming closer/farther to the reference trajectory over time?* |
-| **Symmetric** conv./div.   | *Are the states of the two trajectories becoming closer/farther over time?* |
-| **Multiple** conv./div.  | *Are the states of the multiple entities becoming more similar over time?* |
+| Unconstrained ordination analysis on $\mathbf{D_T}$  | *Display resemblance in ecological dynamics* |
+| Cluster analysis on $\mathbf{D_T}$  | *Identify and characterize groups of entities with similar dynamics* |
+| Sum of squares of $\mathbf{D_T}$  | *Quantify the amount of variation in ecological dynamics* |
+| Contribution of individual trajectories  | *Assess the degree of uniqueness in ecological dynamics* |
+| Constrained ordination analysis on $\mathbf{D_T}$  | *Model variation in ecological dynamics* |
 
 :::
 
-::: {.column width="35%"}
+::: {.column width="45%"}
+![](resources/img/dynamic_variation.webp)
 :::
 
 ::::
