@@ -31,6 +31,7 @@ progress: true
 6. Comparing pairs of trajectories
 7. Variation in ecological dynamics
 8. Transforming trajectories
+9. Advantages and limitations
 :::
 
 ::: {.column width="50%"}
@@ -848,7 +849,7 @@ dynamicVariation(xt, distance.type = "TSPD")
 7. Variation in ecological dynamics
 :::
 
-# 7. Transforming trajectories {background-color="#008080"}
+# 8. Transforming trajectories {background-color="#008080"}
 
 ## Trajectory interpolation
 
@@ -964,6 +965,44 @@ par(oldpar)
 
 ::: footer
 8. Transforming trajectories
+:::
+
+# 9. Advantages and limitations {background-color="#008080"}
+
+## Advantages and limitations
+
+![](resources/img/logo_ecotraj.png){.absolute width="100" bottom="30"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Advantages**
+
++ *Great flexibility* regarding target entities, sampling design and multivariate state space.
+
++ Ability to compare ecological dynamics *globally*.
+
++ Can be *combined* with other frameworks (including second-order trajectory analysis).
+
+:::
+
+::: {.column width="50%"}
+
+**Limitations**
+
++ Primarily *descriptive* (although includes some inferential tests).
+
++ Computationally *inefficient* for very large data sets (at present).
+
++ Metrics are affected by *sampling design*, i.e. the frequency of surveys and size of sampling units.
+
+:::
+
+::::
+
+::: footer
+9. Advantages and limitations
 :::
 
 #  {background-color="#008080"}
