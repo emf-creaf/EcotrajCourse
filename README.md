@@ -1,6 +1,6 @@
 Course on Ecological Trajectory Analysis
 ================
-Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri
+Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri, Javier de la Casa
 
 ## Introduction
 
