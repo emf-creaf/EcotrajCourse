@@ -1,6 +1,6 @@
 ---
 title: "Course on Ecological Trajectory Analysis"
-author: "Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri"
+author: "Miquel De Cáceres, Anthony Sturbois, Nicolas Djeghri, Javier de la Casa"
 output: github_document
 ---
 

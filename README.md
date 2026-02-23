@@ -26,6 +26,7 @@ Code for course sessions is in `sessions/*.qmd` files. Printed
 1.  Introduction to Ecological Trajectory Analysis
 2.  Exploring the potential of ETA on different multivariate spaces
 3.  Introduction to Cyclical Ecological Trajectory Analysis
+4.  Application: Elementome Trajectory Analysis
 
 ## Ancillary files
 
