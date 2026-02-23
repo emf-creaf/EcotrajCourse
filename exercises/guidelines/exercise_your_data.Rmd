@@ -1,0 +1,74 @@
+---
+title: "Work with your own data"
+author: "Miquel De Cáceres/Javi de la Casa"
+date: "2026-02-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Work with your own data {background-color="pink"}
+
+## Exercise objectives
+
+1.  Build trajectory objects using your own data
+2.  Analyze cycles
+3.  Compare different trajectories
+
+-   If you did not bring your own data, you can use the complete lake database, that includes 5 lakes
+
+## Step 1.
+
+Load your data. Alternatively you can load the Azores data including three more lakes (exercises/StudentCSVdata/ETA_azores_exercise.csv)
+
+```{r}
+
+```
+
+
+## Step 2.
+
+Transform the data
+
+```{r}
+
+```
+
+
+## Step 3.
+
+Define the distance matrix (choose a distance metric), site and surveys
+
+```{r}
+
+```
+
+## Step 4.
+
+Create the trajectory object and plot it in a selected time slot (for Azores, the modern era). Describe visually how are they shifting, and in which direction (use loadings/ weights)
+
+```{r}
+
+```
+
+
+## Step 5.
+
+Calculate, using moving windows, the internal variance, speed and directionality
+
+```{r}
+
+```
+
+
+## Step 6.
+
+Compare the different trajectories using the RMA plot. Is it the same using all period and your selected period?
+
+```{r}
+
+```
+
