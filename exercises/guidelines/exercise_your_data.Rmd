@@ -10,13 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Work with your own data {background-color="pink"}
+# Work with your own data {background-color="orange"}
 
 ## Exercise objectives
 
 1.  Build trajectory objects using your own data
-2.  Analyze cycles
-3.  Compare different trajectories
+2.  Quantify and compare different trajectories
+3.  Ask yourself questions about the fit of your data into ETA framework
 
 -   If you did not bring your own data, you can use the complete lake database, that includes 5 lakes
 
@@ -31,7 +31,7 @@ Load your data. Alternatively you can load the Azores data including three more 
 
 ## Step 2.
 
-Transform the data
+Transform the data. how does your data look like? Transformation matters so give it a thought
 
 ```{r}
 
@@ -48,7 +48,7 @@ Define the distance matrix (choose a distance metric), site and surveys
 
 ## Step 4.
 
-Create the trajectory object and plot it in a selected time slot (for Azores, the modern era). Describe visually how are they shifting, and in which direction (use loadings/ weights)
+Create the trajectory object and plot it in a selected time slot. Describe visually how are they shifting, and if possible, in which direction (use loadings/ weights)
 
 ```{r}
 

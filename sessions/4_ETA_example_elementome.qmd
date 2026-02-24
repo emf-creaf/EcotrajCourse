@@ -138,7 +138,7 @@ azores <- ETA_azores_example %>%
   group_by(record_ID) %>%
   # Apply square root transformation
   mutate(across(all_of(element_list), ~ sqrt(.), .names = "{.col}")) %>%
-  # MIn-maz transformation (between 0 and 1)
+  # Min-max transformation (between 0 and 1)
   mutate(across(all_of(element_list), ~ (. - min(.)) / (max(.) - min(.)), .names = "{.col}")) %>%
   # Remove duplicates
   distinct(TIME_BP, .keep_all = TRUE) %>%
@@ -228,12 +228,12 @@ site_azores <- site_azores[[1]] #Make sure it is a vector
 
 ## Defining the survey vector
 
-Time here is years before present. **ecotraj** will understand older ages (bigger numbers) as the most recent. This could be changed adding a minus
+Time here is years before present. **ecotraj** will understand older ages (bigger numbers) as the most recent. This could be changed adding a minus but it can drives problems in the calculation of the metrics
 
 ```{r, echo = TRUE}
 survey_azores <- azores[, 2]
 
-survey_azores <- survey_azores[[1]] #should be a vector
+survey_azores <- survey_azores[[1]]  #should be a vector
 ```
 
 ::: footer
@@ -353,7 +353,7 @@ legend("topright", col=c("yellow", "green"),
 
 <!-- ::: {.column width="50%"} -->
 
-```{r, echo = FALSE, fig.width=8, fig.height=4}
+```{r, echo = FALSE, fig.width=8, fig.height=2.5}
 pca_scores$PC2 <- -pca_scores$PC2
 loadingsPC2 <- -loadings$PC2
 
@@ -415,7 +415,7 @@ trajectoryPCoA(traj_empadadas)
 ## Plotting specific moments of time
 
 ```{r, echo = TRUE}
-traj_azores_ModernEra<- subsetTrajectories(traj_azores,  window_selection = c(0, 500)) # remember the minus
+traj_azores_ModernEra<- subsetTrajectories(traj_azores,  window_selection = c(0,500)) # remember the minus
 
 trajectoryPCoA(traj_azores_ModernEra , traj.colors = c("yellow", "green"), lwd = 2,
                survey.labels = F)
@@ -465,6 +465,9 @@ metrics_azores<- trajectoryWindowMetrics(traj_azores, 500, type = "times", add =
 
 metrics_azores <- metrics_azores%>% mutate(
   meantime = ((t_start + t_end)/2))
+
+
+
 ```
 
 ::: footer
@@ -478,7 +481,8 @@ Now we have a good quantitative assessment of how trajectories change through ti
 ```{r, echo = TRUE}
 ggplot(metrics_azores, aes(x = meantime , y = internal_variance, color = trajectory, group = trajectory)) + 
   geom_line(linewidth = 1) + 
-  scale_x_reverse() + theme_minimal()
+  scale_x_reverse() +
+  theme_minimal()
 ```
 
 ::: footer
@@ -519,7 +523,7 @@ The Azores had been subject to two waves of human arrival (Raposeiro et al., 202
 
 ## How to interpret the metrics
 
-![](resources/img/metrics.png){fig-align="center"}
+![](resources/img/metrics_interpretation.png){fig-align="center"}
 
 ::: footer
 4.  Calculation of trajectory metrics
@@ -690,7 +694,7 @@ We are going to use the Relative Trajectory Movement Assessment (RTMA) (Djeghri 
 trajectoryRMA(traj_azores_ModernEra)
 ```
 
-It gives error becase the number of surveys does not match
+It gives error because the number of surveys does not match
 
 ::: footer
 5.  Comparing trajectories
@@ -722,8 +726,12 @@ trajRMA<- trajectoryRMA(traj_azores_mod_inter)
 
 trajRMA
 ```
+::: footer
+5.  Comparing trajectories
+:::
 
 
+## Plot it
 
 ```{r, echo = TRUE}
 
@@ -737,8 +745,14 @@ trajectoryRMAPlot(trajRMA)
 
 # 6. Hearing the trajectories {background-color="pink"}
 
+## soundtraj
 
-We hope that you have now a better understanding of Ecological Trajectory Analysis and motivation to use it as an analytically tool.
+[soundtraj](https://codeberg.org/linalab/multivariate-spaces-sonification) is a framework developed to produce sound out of multivariate trajectories  
+
+![](resources/img/listening.jpg)
+
+
+# We hope that you have now a better understanding of Ecological Trajectory Analysis and motivation to use it as an analytically tool. {background-color="pink"}
 
 
 
