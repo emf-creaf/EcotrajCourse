@@ -202,7 +202,7 @@ The most important *geometric* elements of ETA are:
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="55%"}
 | Element   | Description                                                  |
 |-------------------|---------------------------------------------------|
 | *Ecological sub-trajectory* | A trajectory derived from a time-ordered subset of the observations of its parent trajectory. |
@@ -211,7 +211,7 @@ The most important *geometric* elements of ETA are:
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="45%"}
 ![](resources/img/trajectory_subsets.webp)
 :::
 
@@ -480,17 +480,17 @@ trajectoryInternalVariation(x)
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="65%"}
 
 | Metric            |  Description                                       |
 |-------------------|----------------------------------------------------|
 | *Angle between consecutive segments*  | The angle (change in direction) between two consecutive segments on the corresponding plane formed by the corresponding triplet. |
-| *Angle with respect to an initial state*  | The total path length of a trajectory $\mathbf{T}$ is the sum of the lengths of its directed segments. |
+| *Angle with respect to the initial segment*  | The angle between the initial segment and the vector joining the initial state and current state. |
 | *Angle with respect to 2D axes* | The angle between a particular segment and the first or second axis. | 
-| *Trajectory directionality* | A weighed average of along the trajectory of the relative difference between angles and straight lines (180º). |
+| *Trajectory directionality* | A measure of trajectory straightness. Calculated as the weighed average of along the trajectory of the relative difference between angles and straight lines (180º). |
 :::
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 ![](resources/img/changes_direction.webp)
 :::
 
@@ -506,17 +506,17 @@ trajectoryInternalVariation(x)
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="65%"}
 
 | Metric            |  Example question(s)                                      |
 |-------------------|----------------------------------------------------|
 | Angle between consecutive segments  | *Are there abrupt changes in direction of dynamics?* |
-| Angle with respect to an initial state  | *Does the trajectory continue the initial direction?* |
+| Angle with respect to the initial segment  | *Does the trajectory continue the initial direction?* |
 | Angle with respect to 2D axes | *Can the direction of changes be interpreted?* | 
 | Trajectory directionality | *Do dynamics of the target entity follow the same direction consistently?* |
 :::
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 ![](resources/img/changes_direction.webp)
 :::
 
@@ -582,7 +582,7 @@ Another function, called `trajectoryWindowMetrics()` calculates trajectory metri
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="65%"}
 
 | Metric            |  Example question(s)                                       |
 |-------------------|----------------------------------------------------|
@@ -592,7 +592,7 @@ Another function, called `trajectoryWindowMetrics()` calculates trajectory metri
 
 :::
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 ![](resources/img/comparing_target_reference.webp)
 :::
 
@@ -681,7 +681,7 @@ trajectoryShifts(x_shift)
 ```
 
 
-We see that the observations of trajectory "2" correspond to states of trajectory "1" at 0.5 time units later in time. Surveys with missing values indicate that the projection of the target state cannot be determined (because the reference trajectory is too short).
+We see that the observations of trajectory "2" correspond to states of trajectory "1" at 0.5 time units later in time. Surveys with missing values (e.g. `NA`) indicate that the projection of the target state cannot be determined (because the reference trajectory is too short).
 
 
 ::: footer
@@ -694,7 +694,7 @@ We see that the observations of trajectory "2" correspond to states of trajector
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 
 | Metric            |  Example question(s)                                       |
 |-------------------|----------------------------------------------------|
@@ -704,7 +704,7 @@ We see that the observations of trajectory "2" correspond to states of trajector
 
 :::
 
-::: {.column width="35%"}
+::: {.column width="40%"}
 ![](resources/img/convergence_divergence.webp)
 :::
 
