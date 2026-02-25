@@ -169,6 +169,24 @@ Recurrent or cyclical time is another conceptual element in [Cyclical Ecological
 2.  Conceptual and geometric elements
 :::
 
+## Diversity of target entities and multivariate spaces
+
+The ETA framework has been applied to different contexts, using different kinds of descriptors to define the multivariate space:
+
+| Context   | Multivariate space ($\Omega_0$) | References                                                  |
+|-------------------|--|---------------------------------------------------|
+| Community ecology | Species composition | [Tuomi et al. (2023)](https://doi.org/10.1111/ecog.06489), [Hopper et al. (2024)](https://doi.org/10.1111/1365-2656.14046), [Lécuyer et al. (2024)](https://doi.org/10.1016/j.ecss.2024.108738), [Hoffman et al. (2025)](https://doi.org/10.1111/ele.70033) |
+| Soil biology | DNA based OTU composition | [Hacopian et al (2024)](https://doi.org/10.1016/j.soilbio.2024.109511), [Barnett et al. (2024)](https://doi.org/10.1111/ele.14393), [Meyneng et al. (2024)](https://doi.org/10.1186/s40793-024-00554-9) |
+| Conservation biology | Species composition, DNA based OTU composition | [Sturbois et al. (2021)](https://doi.org/10.1002/aqc.3704), [Neely et al. (2023)](https://doi.org/10.1038/s42003-023-05600-9),  [Joyce et al. (2024)](https://doi.org/10.1016/j.biocon.2024.110593), [Scotti et al. (2024)](https://doi.org/10.1002/rra.4393) |
+| Functional ecology | Functional traits, chemical composition,  isotopic composition | [Sturbois et al (2021)](https://doi.org/10.1002/ecm.1501), [Darragh et al. (2023)](https://doi.org/10.1111/jeb.14165), [Coulon et al. (2024)](https://doi.org/10.1016/j.marenvres.2024.106531) |
+| Forest ecology | Diameter distribution, structural metrics from LiDAR, species composition | [De Cáceres et al. (2019)](https://doi.org/10.1002/ecm.1350), [Davies et al. (2023)](https://doi.org/10.1002/ece3.9912), [Walesiak et al. (2024)](https://doi.org/10.1111/1365-2664.14727), [Kikuchi et al. (2024)](https://doi.org/10.1016/j.foreco.2024.122182), [Vogel et al. (2024)](https://doi.org/10.3390/grasses3030015) | 
+| Paleoecology | Fossil taxa composition, elemental composition, fossil pollen composition| [Staples et al. (2024)](https://doi.org/10.1111/geb.13787), [de la Casa et al. (2025)](https://doi.org/10.1016/j.ecolind.2025.113630) |
+| Plant or animal pathology | Pathogen/parasite composition, DNA-based OTU composition | [VanWallendael et al. (2022)](https://doi.org/10.1371/journal.pbio.3001681), [Bakker et al. (2023)](https://doi.org/10.3389/fmicb.2023.1271219), [Mathieu-Begné et al. (2023)](https://doi.org/10.1111/mec.16901)  |
+
+::: footer
+2.  Conceptual and geometric elements
+:::
+
 ## Geometric elements (1)
 
 The most important *geometric* elements of ETA are:
