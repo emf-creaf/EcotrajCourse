@@ -683,7 +683,7 @@ Now we are going to calculate metrics of the divergence/convergence of the traje
 
 . . .
 
-We are going to use the Relative Trajectory Movement Assessment (RTMA) (Djeghri et al., 2026. Ecological Monographs) using the **ecotraj** trajectoryRMA
+We are going to use the Relative Trajectory Movement Assessment (RTMA) (Djeghri et al., under review) using the **ecotraj** trajectoryRMA
 . . .
 
 . . .

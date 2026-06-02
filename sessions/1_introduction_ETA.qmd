@@ -71,7 +71,7 @@ progress: true
 
 **What is Ecological Trajectory Analysis?**
 
-Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of ecological entities (e.g. communities or ecosystems).
+Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of ecological entities (e.g. individuals, communities or ecosystems) in a chosen multivariate space.
 
 . . .
 
@@ -81,7 +81,7 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
 
  + Extended with new **metrics** and **visualisation** modes ([Sturbois et al. 2021a](https://doi.org/10.1016/j.ecolmodel.2020.109400)).
 
- + Applied to stable isotope data, referred to it as **Stable Isotope Trajectory Analysis (SITA)** ([Sturbois et al. 2021b](https://doi.org/10.1002/ecm.1501)).
+ + Extended to cyclical data, under the name of **Cyclical Ecological Trajectory Analysis (CETA)** ([Djeghri et al. 2026](https://doi.org/10.1002/ecm.70058)).
  
  + Instrumental to develop another methodological framework: **Ecological Dynamic Regimes (EDR)** ([Sánchez-Pinillos et al. 2023](https://doi.org/10.1002/ecm.1589)).
 
@@ -89,7 +89,7 @@ Ecological Trajectory Analysis (ETA) is a framework to analyze the dynamics of e
  
  + Applied in a **paleoecological context** using elemental composition data ([de la Casa et al. 2025](https://doi.org/10.1016/j.ecolind.2025.113630)).
 
- + Extended to cyclical data, under the name of **Cyclical Ecological Trajectory Analysis (CETA)** (Djeghri et al. 2026)^[Djeghri N, Sturbois A, Hélaouët P, Geissmann Q, Rimmelin-Maury P, Boyé A, Gauthier O, De Cáceres M (2026). Going round in cycles but going somewhere: Deciphering cyclical dynamics using Ecological Trajectory Analysis. Ecological Monographs.].
+ + Applied to stable isotope data, referred to it as **Stable Isotope Trajectory Analysis (SITA)** ([Sturbois et al. 2021b](https://doi.org/10.1002/ecm.1501)).
  
 . . .
 
